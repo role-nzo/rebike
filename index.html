@@ -16,10 +16,9 @@
         alert(content);
       });
       Instascan.Camera.getCameras().then(function (cameras) {
-	      var para = document.createElement("p");
         if (cameras.length > 0) {
 		for(var i=0; i<cameras.length; i++) {
-			document.appendChild(document.createTextNode(cameras[i].name));
+			document.getElementById("preview").appendChild(document.createTextNode(cameras[i].name));
 		}
           scanner.start(cameras[0]);
         } else {
