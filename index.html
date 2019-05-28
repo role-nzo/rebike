@@ -37,7 +37,7 @@
       let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
       scanner.addListener('scan', function (content) {
         if(content.startsWith("rebike_station:")) {
-		window.open("infolabs.ns0.it/~quintadsa/lziosi/stazionebiciclette/?station="+content.replace('rebike_station',''),"_self")	
+		window.open("http://infolabs.ns0.it/~quintadsa/lziosi/stazionebiciclette/?station="+content.replace('rebike_station',''),"_self")	
 	}
       });
       Instascan.Camera.getCameras().then(function (cameras) {
