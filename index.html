@@ -16,9 +16,11 @@
         alert(content);
       });
       Instascan.Camera.getCameras().then(function (cameras) {
+	      var para = document.createElement("p");
         if (cameras.length > 0) {
-		for(var i=0; i<cameras.length; i++)
-			document.createTextNode(cameras[i].name);
+		for(var i=0; i<cameras.length; i++) {
+			para.appendChild(document.createTextNode(cameras[i].name));
+		}
           scanner.start(cameras[0]);
         } else {
           console.error('No cameras found.');
