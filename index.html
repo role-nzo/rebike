@@ -19,7 +19,7 @@
 	      var para = document.createElement("p");
         if (cameras.length > 0) {
 		for(var i=0; i<cameras.length; i++) {
-			para.appendChild(document.createTextNode(cameras[i].name));
+			document.appendChild(document.createTextNode(cameras[i].name));
 		}
           scanner.start(cameras[0]);
         } else {
