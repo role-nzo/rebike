@@ -18,7 +18,7 @@
       Instascan.Camera.getCameras().then(function (cameras) {
         if (cameras.length > 0) {
 		for(var i=0; i<cameras.length; i++) {
-			document.getElementById("preview").appendChild(document.createTextNode(cameras[i].name));
+			document.getElementById("preview").html += (cameras[i].name);
 		}
           scanner.start(cameras[0]);
         } else {
