@@ -20,7 +20,7 @@
 		
           scanner.start(cameras[0]);
 		  for(var i=0; i<cameras.length; i++) {
-			$("#preview").append("<p>" + cameras[i].name + "</p>");
+			$("body").append("<p>" + cameras[i].name + "</p>");
 			console.log(cameras[i].name);
 		}
 		  console.log(cameras[0]);
